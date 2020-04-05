@@ -1,0 +1,54 @@
+.tree::after {
+  content: '';
+  display: block;
+  height: 10vh;
+  width: 2vw;
+  margin: auto;
+  background: #7F3E18;
+}
+.tree-1 {
+  position: relative;
+  top: 50vh;
+  left: -1vw;
+  width: 13vw;
+}
+.tree-2 {
+  position: relative;
+  bottom: 29vh;
+  left: 74vw;
+  width: 26vw;
+}
+.tree-2::before {
+  content: '';
+  display: block;
+  width: 2vw;
+  height: 2vw;
+  margin: 0 46.5%;
+  background: url(../img/star.png) no-repeat center;
+  background-size: contain;
+}
+.row-1,
+.row-2 {
+  position: relative;
+  margin: auto;
+  border-style: solid;
+  border-top: 0;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: green;
+  z-index: 5;
+}
+.decoration {
+  position: absolute;
+  width: 100%;
+  padding: .2vh;
+  border-radius: 50%;
+  background: #C8E4F7;
+}
+.tree img {
+  position: relative;
+  z-index: 100;
+}
+.tree-2 img {
+  width: 3vh;
+}

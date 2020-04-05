@@ -1,0 +1,31 @@
+.snowman-wrapper {
+	left: ;
+	position: absolute;
+	bottom: 14vh;
+	left: 56vw;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.circle {
+	position: relative;
+	border-radius: 50%;
+	background-color: white;
+	box-shadow: 0px 0px 9px 2px rgb(255, 255, 255), inset 0px 0px 148px -39px rgba(115, 115, 115, 0.62);
+}
+.circle.circle-1 {
+	height: 25vh;
+	width: 25vh;
+}
+.circle.circle-2 {
+	height: 18vh;
+	width: 18vh;
+	top: 15px;
+  z-index: 1;
+}
+.circle.circle-3 {
+	height: 14vh;
+	width: 14vh;
+	top: 20px;
+  z-index: 2;
+}

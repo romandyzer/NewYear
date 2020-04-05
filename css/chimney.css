@@ -1,0 +1,75 @@
+.chimney {
+  position: absolute;
+  top: 28vh;
+  left: 32vw;
+  height: 22vh;
+  width: 3.5vw;
+  background: #512E1A;
+}
+.chimney::before {
+  content: '';
+  position: absolute;
+  left: -1vw;
+  height: 1.5vh;
+  width: 5.5vw;
+  display: block;
+  background: linear-gradient(to top, #512E1A, #9BC7EF);
+}
+.chimney::after {
+  content: '';
+  position: absolute;
+  top: 4vh;
+  left: 1vw;
+  width: 0;
+  opacity: 0;
+  box-shadow: 0 0 7vh 0 white;
+  -moz-animation: cloud 4s infinite;
+  -ms-animation: cloud 4s infinite;
+  -o-animation: cloud 4s infinite;
+  -webkit-animation: cloud 4s infinite;
+  animation: cloud 4s infinite;
+}
+@keyframes cloud {
+  30%  { opacity: 1; }
+  60%  { opacity: 1; }
+  100% {
+    top: -20vh;
+    left: 5vw;
+    opacity: 0;
+    box-shadow: 0 0 7vh 4vh white;
+    width: 2vw;
+  }
+}
+@-ms-keyframes cloud {
+  30%  { opacity: 1; }
+  60%  { opacity: 1; }
+  100% {
+    top: -20vh;
+    left: 5vw;
+    opacity: 0;
+    box-shadow: 0 0 7vh 4vh white;
+    width: 2vw;
+  }
+}
+@-webkit-keyframes cloud {
+  30%  { opacity: 1; }
+  60%  { opacity: 1; }
+  100% {
+    top: -20vh;
+    left: 5vw;
+    opacity: 0;
+    box-shadow: 0 0 7vh 4vh white;
+    width: 2vw;
+  }
+}
+@-moz-keyframes cloud {
+  30%  { opacity: 1; }
+  60%  { opacity: 1; }
+  100% {
+    top: -20vh;
+    left: 5vw;
+    opacity: 0;
+    box-shadow: 0 0 7vh 4vh white;
+    width: 2vw;
+  }
+}

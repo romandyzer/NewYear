@@ -1,0 +1,19 @@
+.home .board {
+  position: relative;
+  height: 4vh;
+  margin: .1vh auto;
+  border-top: .2vh solid #3A1B09;
+  border-bottom: .2vh solid #3A1B09;
+}
+.home .board::before,
+.home .board::after {
+  content: '';
+  position: absolute;
+  top: -.1vh;
+  padding: 2vh;
+  border-radius: 50%;
+  background: #7F3E18;
+}
+.home .board::after {
+  right: 0;
+}

@@ -1,0 +1,56 @@
+.window-wrapper {
+  position: absolute;
+  top: 60vh;
+  left: 19vw;
+  width: 9vw;
+  height: 12vh;
+  overflow: hidden;
+  border: 1vh solid #3A1B09;
+  border-radius: 1.5vh;
+  background: #FEFFCC;
+}
+.window-wrapper:before,
+.window-wrapper:after {
+  content: '';
+  position: absolute;
+
+  background: #3A1B09;
+}
+.window-wrapper:before {
+  top: calc(50% - .5vh);
+  width: 100%;
+  height: 1vh;
+  z-index: 1;
+}
+.window-wrapper:after {
+  top: 0;
+  left: calc(50% - .5vh);
+  height: 100%;
+  width: 1vh;
+}
+.light {
+  height: 100%;
+  background: #FCEE50;
+  opacity: 0;
+  -moz-animation: light 5s infinite;
+  -ms-animation: light 5s infinite;
+  -o-animation: light 5s infinite;
+  -webkit-animation: light 5s infinite;
+  animation: light 5s infinite;
+}
+@keyframes light {
+  50% { opacity: 1 }
+  100% { opacity: 0 }
+}
+@-ms-keyframes light {
+  50% { opacity: 1 }
+  100% { opacity: 0 }
+}
+@-webkit-keyframes light {
+  50% { opacity: 1 }
+  100% { opacity: 0 }
+}
+@-moz-keyframes light {
+  50% { opacity: 1 }
+  100% { opacity: 0 }
+}

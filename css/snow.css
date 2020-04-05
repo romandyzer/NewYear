@@ -1,0 +1,138 @@
+.snowflake {
+	position: absolute;
+	text-align: center;
+	z-index: 9999;
+	top: -100px;
+	width: 1em;
+	height: 1em;
+	color: white;
+	font-size: 16px;
+	text-shadow: rgba(0, 0, 0, 0.7) 1px 1px 2px;
+	/* We use the following properties to apply the fade and drop animations to each snowflake.
+	   Each of these properties takes two values. These values respectively match a setting
+	   for fade and drop.*/
+	-webkit-animation-iteration-count: infinite/*, 20*/;
+	-webkit-animation-direction: normal, normal;
+	-webkit-animation-timing-function: linear, ease-in;
+	-moz-animation-iteration-count: infinite/*, 20*/;
+	-moz-animation-direction: normal, normal;
+	-moz-animation-timing-function: linear, ease-in;
+}
+.snowflake span {
+	position: absolute;
+	display: block;
+	/* We use the following properties to adjust the clockwiseSpin or counterclockwiseSpin
+	   animations on each snowflake.
+	   The createASnowflake function determines whether a flake has the 
+	   clockwiseSpin or counterclockwiseSpin animation.	*/
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-transform-origin: 50% -100%;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-direction: alternate;
+	-moz-animation-timing-function: ease-in-out;
+	-moz-transform-origin: 50% -100%;
+}
+.snowflake span.snowball-0{
+	background-image: url(../img/snow5_compact-3.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	width: 41px;
+	height: 44px;
+}
+.snowflake span.snowball-1{
+	background-image: url(../img/snow5_compact-3.png);
+	background-repeat: no-repeat;
+	background-position: -43px -1px;
+	width: 36px;
+	height: 40px;
+}
+.snowflake span.snowball-2{
+	background-image: url(../img/snow5_compact-3.png);
+	background-repeat: no-repeat;
+	background-position: -83px -1px;
+	width: 29px;
+	height: 31px;
+}
+.snowflake span.snowball-3{
+	background-image: url(../img/snow5_compact-3.png);
+	background-repeat: no-repeat;
+	background-position: 0px -44px;
+	width: 42px;
+	height: 45px;
+}
+.snowflake span.snowball-4{
+	background-image: url(../img/snow5_compact-3.png);
+	background-repeat: no-repeat;
+	background-position: -175px -165px;
+	width: 20px;
+	height: 20px;
+}
+.snowflake span.snowball-5{
+	background-image: url(../img/snow5_compact-3.png);
+	background-repeat: no-repeat;
+	background-position: -112px -49px;
+	width: 22px;
+	height: 22px;
+}
+.snowflake .tiny {
+	-moz-transform:scale(0.2);
+	-webkit-transform:scale(0.2);
+}
+.snowflake .small {
+	-moz-transform: scale(0.5);
+	-webkit-transform: scale(0.5);
+}
+.snowflake .medium {
+	-moz-transform:scale(0.7);
+	-webkit-transform:scale(0.7);
+}
+.snowflake .large {
+	-moz-transform:scale(1);
+	-webkit-transform:scale(1);
+}
+.snowflake .massive {
+	-moz-transform:scale(1.2);
+	-webkit-transform:scale(1.2);
+}
+/* Hides a snowflake towards the very end of the animation */
+@-webkit-keyframes fade {
+	/* Show a snowflake while into or below 85 percent of the animation and hide it, otherwise */
+	0%   { opacity: 1; }
+	85%  { opacity: 1; }
+	100% { opacity: 0; }
+}
+/* Makes a snowflake fall from -50px to 650px pixels in the y-axis */
+@-webkit-keyframes drop {
+	0%   { -webkit-transform: translate(0px, -50px); }
+	100% { -webkit-transform: translate(0px, 100vh); }
+}
+/* Rotates a snowflake from -50 to 50 degrees in 2D space */
+@-webkit-keyframes clockwiseSpin {
+	0%   { -webkit-transform: rotate(-50deg); }
+	100% { -webkit-transform: rotate(50deg); }
+}
+/* Rotates it from 50 to -50 degrees in 2D space */
+@-webkit-keyframes counterclockwiseSpin  {
+	0%   { -webkit-transform: rotate(50deg); }
+	100% { -webkit-transform: rotate(-50deg); }
+}
+/*             mozzilla 				*/
+@-moz-keyframes fade {
+	0%  { opacity: 1; }
+	85%  { opacity: 1; }
+	100%{ opacity: 0; }
+}
+@-moz-keyframes drop {
+	0%  { -moz-transform: translate(0px, -50px); }
+	100%{ -moz-transform: translate(0px, 100vh); }
+}
+@-moz-keyframes clockwiseSpin {
+	0%  { -moz-transform: rotate(-50deg); }
+	100%{ -moz-transform: rotate(50deg); }
+}
+@-moz-keyframes counterclockwiseSpin  {
+	0%  { -moz-transform: rotate(50deg); }
+	100%{ -moz-transform: rotate(-50deg); }
+}

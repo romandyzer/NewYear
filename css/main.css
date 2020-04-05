@@ -1,0 +1,516 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  overflow:hidden;
+}
+h1 {
+  font-family: 'Indie Flower', cursive;
+  text-align: center;
+  color: lemonchiffon;
+  position: absolute;
+  top: 10vh;
+  left: 34%;
+  font-size: 440%;
+  z-index: 100;
+}
+.wrapper {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(to bottom, #01000F, #00276C);
+  z-index: -5;
+}
+/*====================================================*/
+/*========================MOON========================*/
+/*====================================================*/
+.moon {
+  position: absolute;
+  top: 15vh;
+  right: 20vw;
+  padding: 4vh;
+  border-radius: 50%;
+  background: lemonchiffon;
+  box-shadow: 0 0 140px 40px lemonchiffon;
+  z-index: -8;
+}
+/*====================================================*/
+/*=======================HOME=========================*/
+/*====================================================*/
+.home {
+  position: absolute;
+  bottom: 0;
+  left: 10vw;
+  height: 50vh;
+  width: 30vw;
+  background: #512E1A;
+}
+/*====================================================*/
+/*========================ROOF========================*/
+/*====================================================*/
+.roof-wrapper {
+  position: absolute;
+  height: 26vh;
+  width: 32vw;
+  top: 25vh;
+  left: 9vw;
+  overflow: hidden;
+  z-index: 3;
+}
+.roof {
+  height: 3vh;
+  margin: auto;
+  border-radius: 1em 1em 0 0;
+  background: linear-gradient(to top, #512E1A, #9BC7EF);
+}
+/*====================================================*/
+/*========================SANTA=======================*/
+/*====================================================*/
+.santa {
+  position: absolute;
+  top: 30vh;
+  width: 18vw;
+  left: -20vw;
+  z-index: -5;
+  transform: rotate(-8deg);
+  -moz-animation: santa 20s linear infinite;
+  -ms-animation: santa 20s linear infinite;
+  -o-animation: santa 20s linear infinite;
+  -webkit-animation: santa 20s linear infinite;
+  animation: santa 20s linear infinite;
+}
+@keyframes santa {
+  100% { top: 5vh; transform: rotate(24deg); left: 120vw; width: 8vw; }
+}
+@-ms-keyframes santa {
+  100% { top: 5vh; transform: rotate(24deg); left: 120vw; width: 8vw; }
+}
+@-webkit-keyframes santa {
+  100% { top: 5vh; transform: rotate(24deg); left: 120vw; width: 8vw; }
+}
+@-moz-keyframes santa {
+  100% { top: 5vh; transform: rotate(24deg); left: 120vw; width: 8vw; }
+}
+
+.chimney {
+  position: absolute;
+  top: 28vh;
+  left: 32vw;
+  height: 22vh;
+  width: 3.5vw;
+  background: #512E1A;
+}
+.chimney::before {
+  content: '';
+  position: absolute;
+  left: -1vw;
+  height: 1.5vh;
+  width: 5.5vw;
+  display: block;
+  background: linear-gradient(to top, #512E1A, #9BC7EF);
+}
+.chimney::after {
+  content: '';
+  position: absolute;
+  top: 4vh;
+  left: 1vw;
+  width: 0;
+  opacity: 0;
+  box-shadow: 0 0 7vh 0 white;
+  -moz-animation: cloud 4s infinite;
+  -ms-animation: cloud 4s infinite;
+  -o-animation: cloud 4s infinite;
+  -webkit-animation: cloud 4s infinite;
+  animation: cloud 4s infinite;
+}
+@keyframes cloud {
+  30%  { opacity: 1; }
+  60%  { opacity: 1; }
+  100% { top: -20vh; left: 5vw; opacity: 0; box-shadow: 0 0 7vh 4vh white; width: 2vw; }
+}
+@-ms-keyframes cloud {
+  30%  { opacity: 1; }
+  60%  { opacity: 1; }
+  100% { top: -20vh; left: 5vw; opacity: 0; box-shadow: 0 0 7vh 4vh white; width: 2vw; }
+}
+@-webkit-keyframes cloud {
+  30%  { opacity: 1; }
+  60%  { opacity: 1; }
+  100% { top: -20vh; left: 5vw; opacity: 0; box-shadow: 0 0 7vh 4vh white; width: 2vw; }
+}
+@-moz-keyframes cloud {
+  30%  { opacity: 1; }
+  60%  { opacity: 1; }
+  100% { top: -20vh; left: 5vw; opacity: 0; box-shadow: 0 0 7vh 4vh white; width: 2vw; }
+}
+
+.hill {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to top, #2386EB, #C8E4F7);
+}
+.hill-back-1 {
+  height: 25vh;
+  width: 80vw;
+  left: 0;
+  border-radius: 0 100% 0 0;
+  z-index: -2
+}
+.hill-back-2 {
+  height: 25vh;
+  width: 55vw;
+  right: 0;
+  border-radius: 100% 0 0 0;
+  z-index: -2
+}
+.hill-1 {
+  height: 18vh;
+  width: 35vw;
+  left: 0;
+  border-radius: 0 100% 0 0;
+  z-index: 6;
+}
+.hill-2 {
+  height: 20vh;
+  width: 30vw;
+  right: 0;
+  border-radius: 100% 0 0 0;
+  z-index: 3;
+}
+.hill-3 {
+  height: 16vh;
+  width: 18vw;
+  right: 20vw;
+  border-radius: 0 100% 0 0;
+}
+.hill-4 {
+  height: 16vh;
+  width: 18vw;
+  right: 38vw;
+  border-radius: 100% 0 0 0;
+}
+.hill-5 {
+  height: 14vh;
+  width: 16vw;
+  left: 20vw;
+  border-radius: 100% 0 0 0;
+  z-index: 7;
+}
+.hill-6 {
+  height: 14vh;
+  width: 16vw;
+  left: 36vw;
+  border-radius: 0 100% 0 0;
+}
+
+.home .board {
+  position: relative;
+  height: 4vh;
+  margin: .1vh auto;
+  border-top: .2vh solid #3A1B09;
+  border-bottom: .2vh solid #3A1B09;
+}
+.home .board::before,
+.home .board::after {
+  content: '';
+  position: absolute;
+  top: -.1vh;
+  padding: 2vh;
+  border-radius: 50%;
+  background: #7F3E18;
+}
+.home .board::after {
+  right: 0;
+}
+
+.snowflake {
+  position: absolute;
+  text-align: center;
+  z-index: 9999;
+  top: -100px;
+  width: 1em;
+  height: 1em;
+  color: white;
+  font-size: 16px;
+  text-shadow: rgba(0, 0, 0, 0.7) 1px 1px 2px;
+  /* We use the following properties to apply the fade and drop animations to each snowflake.
+     Each of these properties takes two values. These values respectively match a setting
+     for fade and drop.*/
+  -webkit-animation-iteration-count: infinite/*, 20*/;
+  -webkit-animation-direction: normal, normal;
+  -webkit-animation-timing-function: linear, ease-in;
+  -moz-animation-iteration-count: infinite/*, 20*/;
+  -moz-animation-direction: normal, normal;
+  -moz-animation-timing-function: linear, ease-in;
+}
+.snowflake span {
+  position: absolute;
+  display: block;
+  /* We use the following properties to adjust the clockwiseSpin or counterclockwiseSpin
+     animations on each snowflake.
+     The createASnowflake function determines whether a flake has the 
+     clockwiseSpin or counterclockwiseSpin animation. */
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-transform-origin: 50% -100%;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-direction: alternate;
+  -moz-animation-timing-function: ease-in-out;
+  -moz-transform-origin: 50% -100%;
+}
+.snowflake span.snowball-0{
+  background-image: url(../img/snow5_compact-3.png);
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  width: 41px;
+  height: 44px;
+}
+.snowflake span.snowball-1{
+  background-image: url(../img/snow5_compact-3.png);
+  background-repeat: no-repeat;
+  background-position: -43px -1px;
+  width: 36px;
+  height: 40px;
+}
+.snowflake span.snowball-2{
+  background-image: url(../img/snow5_compact-3.png);
+  background-repeat: no-repeat;
+  background-position: -83px -1px;
+  width: 29px;
+  height: 31px;
+}
+.snowflake span.snowball-3{
+  background-image: url(../img/snow5_compact-3.png);
+  background-repeat: no-repeat;
+  background-position: 0px -44px;
+  width: 42px;
+  height: 45px;
+}
+.snowflake span.snowball-4{
+  background-image: url(../img/snow5_compact-3.png);
+  background-repeat: no-repeat;
+  background-position: -175px -165px;
+  width: 20px;
+  height: 20px;
+}
+.snowflake span.snowball-5{
+  background-image: url(../img/snow5_compact-3.png);
+  background-repeat: no-repeat;
+  background-position: -112px -49px;
+  width: 22px;
+  height: 22px;
+}
+.snowflake .tiny {
+  -moz-transform:scale(0.2);
+  -webkit-transform:scale(0.2);
+}
+.snowflake .small {
+  -moz-transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+}
+.snowflake .medium {
+  -moz-transform:scale(0.7);
+  -webkit-transform:scale(0.7);
+}
+.snowflake .large {
+  -moz-transform:scale(1);
+  -webkit-transform:scale(1);
+}
+.snowflake .massive {
+  -moz-transform:scale(1.2);
+  -webkit-transform:scale(1.2);
+}
+/* Hides a snowflake towards the very end of the animation */
+@-webkit-keyframes fade {
+  /* Show a snowflake while into or below 85 percent of the animation and hide it, otherwise */
+  0%   { opacity: 1; }
+  85%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+/* Makes a snowflake fall from -50px to 650px pixels in the y-axis */
+@-webkit-keyframes drop {
+  0%   { -webkit-transform: translate(0px, -50px); }
+  100% { -webkit-transform: translate(0px, 100vh); }
+}
+/* Rotates a snowflake from -50 to 50 degrees in 2D space */
+@-webkit-keyframes clockwiseSpin {
+  0%   { -webkit-transform: rotate(-50deg); }
+  100% { -webkit-transform: rotate(50deg); }
+}
+/* Rotates it from 50 to -50 degrees in 2D space */
+@-webkit-keyframes counterclockwiseSpin  {
+  0%   { -webkit-transform: rotate(50deg); }
+  100% { -webkit-transform: rotate(-50deg); }
+}
+/*             mozzilla         */
+@-moz-keyframes fade {
+  0%  { opacity: 1; }
+  85%  { opacity: 1; }
+  100%{ opacity: 0; }
+}
+@-moz-keyframes drop {
+  0%  { -moz-transform: translate(0px, -50px); }
+  100%{ -moz-transform: translate(0px, 100vh); }
+}
+@-moz-keyframes clockwiseSpin {
+  0%  { -moz-transform: rotate(-50deg); }
+  100%{ -moz-transform: rotate(50deg); }
+}
+@-moz-keyframes counterclockwiseSpin  {
+  0%  { -moz-transform: rotate(50deg); }
+  100%{ -moz-transform: rotate(-50deg); }
+}
+
+.stars, .clouds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.stars {
+  background:  transparent url(../img/stars.png) no-repeat top center;
+  background-size: cover;
+  z-index: -3;
+}
+.clouds{
+  background: transparent url(../img/clouds.png) repeat-x top center;
+  background-size: 100vh;
+  z-index: -3;
+
+  -moz-animation: move-clouds-back 200s linear infinite;
+  -ms-animation: move-clouds-back 200s linear infinite;
+  -o-animation: move-clouds-back 200s linear infinite;
+  -webkit-animation: move-clouds-back 200s linear infinite;
+  animation: move-clouds-back 200s linear infinite;
+}
+@keyframes move-clouds-back {
+    from {background-position: 0 0;}
+    to {background-position: 10000px 0;}
+}
+@-webkit-keyframes move-clouds-back {
+    from {background-position: 0 0;}
+    to {background-position: 10000px 0;}
+}
+@-moz-keyframes move-clouds-back {
+    from {background-position: 0 0;}
+    to {background-position: 10000px 0;}
+}
+@-ms-keyframes move-clouds-back {
+    from {background-position:  0;}
+    to {background-position: 10000px 0;}
+}
+
+.tree::after {
+  content: '';
+  display: block;
+  height: 10vh;
+  width: 2vw;
+  margin: auto;
+  background: #7F3E18;
+}
+.tree-1 {
+  position: relative;
+  top: 50vh;
+  left: -1vw;
+  width: 13vw;
+}
+.tree-2 {
+  position: relative;
+  bottom: 28vh;
+  left: 74vw;
+  width: 26vw;
+}
+.tree-2::before {
+  content: '';
+  display: block;
+  width: 2vw;
+  height: 2vw;
+  margin: 0 46.5%;
+  background: url(../img/star.png) no-repeat center;
+  background-size: contain;
+}
+.row-1,
+.row-2 {
+  position: relative;
+  margin: auto;
+  border-style: solid;
+  border-top: 0;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: green;
+  z-index: 5;
+}
+.decoration {
+  position: absolute;
+  width: 100%;
+  padding: .2vh;
+  border-radius: 50%;
+  background: #C8E4F7;
+}
+.tree img {
+  position: relative;
+  z-index: 100;
+}
+.tree-2 img {
+  width: 3vh;
+}
+
+.window-wrapper {
+  position: absolute;
+  top: 60vh;
+  left: 19vw;
+  width: 9vw;
+  height: 12vh;
+  overflow: hidden;
+  border: 1vh solid #3A1B09;
+  border-radius: 1.5vh;
+  background: #FEFFCC;
+}
+.window-wrapper:before,
+.window-wrapper:after {
+  content: '';
+  position: absolute;
+
+  background: #3A1B09;
+}
+.window-wrapper:before {
+  top: calc(50% - .5vh);
+  width: 100%;
+  height: 1vh;
+  z-index: 1;
+}
+.window-wrapper:after {
+  top: 0;
+  left: calc(50% - .5vh);
+  height: 100%;
+  width: 1vh;
+}
+.light {
+  height: 100%;
+  background: #FCEE50;
+  opacity: 0;
+  -moz-animation: light 5s infinite;
+  -ms-animation: light 5s infinite;
+  -o-animation: light 5s infinite;
+  -webkit-animation: light 5s infinite;
+  animation: light 5s infinite;
+}
+@keyframes light {
+  50% { opacity: 1 }
+  100% { opacity: 0 }
+}
+@-ms-keyframes light {
+  50% { opacity: 1 }
+  100% { opacity: 0 }
+}
+@-webkit-keyframes light {
+  50% { opacity: 1 }
+  100% { opacity: 0 }
+}
+@-moz-keyframes light {
+  50% { opacity: 1 }
+  100% { opacity: 0 }
+}
