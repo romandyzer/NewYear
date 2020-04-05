@@ -1,2 +1,2 @@
 # NewYear
-https://zuboleyr.github.io/NewYear/
+https://rzuboley.github.io/NewYear/
